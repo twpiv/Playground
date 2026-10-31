@@ -107,13 +107,14 @@
 
   // ---------- routing ----------
   function readHash() {
-    var parts = (location.hash || "").replace(/^#/, "").split("/");
+    var parts = (location.hash || "").replace(/^#/, "").split(/[\/-]/);
     if (parts[0] && getModel(parts[0])) state.modelId = parts[0];
     if (parts[1] && TABS.some(function (t) { return t.id === parts[1]; })) state.tab = parts[1];
   }
   function writeHash() {
-    var h = "#" + state.modelId + "/" + state.tab;
-    if (location.hash !== h) history.replaceState(null, "", h);
+    var h = "#" + state.modelId + "-" + state.tab;
+    if (location.hash === h) return;
+    try { history.replaceState(null, "", h); } catch (e) { /* sandboxed frame: hash is optional */ }
   }
 
   // ---------- model picker ----------

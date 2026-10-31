@@ -20,7 +20,7 @@ static web host (GitHub Pages, Netlify, an internal web server). It works offlin
 | **Quick Answers** | Customer FAQs (towing, charging, tax credit, CarPlay, plywood in the bed…), key specs, and competitor talking points. |
 | **Global search** | Press `/` and type what the customer asked about: "HUD", "cooled seats", "sunroof", "tow". It shows which trim has it on every model. |
 
-Dark mode, print styles and mobile layout are included. Deep links work, e.g. `index.html#prologue/compare`.
+Dark mode, print styles and mobile layout are included. Deep links work, e.g. `index.html#prologue-compare`.
 
 ## Data and accuracy
 
