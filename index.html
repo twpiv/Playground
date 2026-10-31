@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Showroom Model Guide</title>
+  <meta name="description" content="Quick trim comparisons, model-year history and customer answers for Honda Ridgeline and Prologue.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#" data-home>
+        <span class="brand-mark" aria-hidden="true">SG</span>
+        <span class="brand-text">Showroom Model Guide</span>
+      </a>
+      <div class="search-wrap">
+        <label class="sr-only" for="global-search">Search features across all models</label>
+        <input id="global-search" type="search" autocomplete="off"
+               placeholder="Which trim has…? Try “HUD” or “sunroof”">
+        <kbd class="search-kbd" aria-hidden="true">/</kbd>
+        <div id="search-results" class="search-results" role="listbox" hidden></div>
+      </div>
+      <button id="theme-toggle" class="icon-btn" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">◐</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="model-picker" aria-label="Choose a model">
+      <div id="model-cards" class="model-cards"></div>
+    </section>
+
+    <section id="model-view" class="model-view" aria-live="polite"></section>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Factory equipment only. Dealer-installed accessories are excluded. Items tagged
+      <span class="verify-tag">verify</span> had conflicting public sources, so confirm them with Honda's current
+      spec sheet or the dealer order guide before quoting to a customer. Prices are MSRP and subject to change.
+    </p>
+  </footer>
+
+  <script src="data/ridgeline.js"></script>
+  <script src="data/prologue.js"></script>
+  <script src="js/illustrations.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
